@@ -1,0 +1,168 @@
+<!-- 浏览器点击动作后弹出的界面,可以自定义交互和样式。 -->
+<!DOCTYPE html>  
+<html>
+<!-- <body style="display:flex; align-items:center; justify-content:space-between;"> -->
+<body >
+    <div class="newDiv">
+        
+    </div>
+    <div id="flexContainer" class="flex-container">
+        <div class="custom" id="customContainer">
+            <button>-</button>
+            <input type="text" id="bgInput">
+            <button>+</button>
+        </div>
+        <button id="rate0.25" class="item item025">0.25 </button>
+        <button id="rate0.5" class="item item05">0.5 </button>
+        <button id="rate0.75" class="item item075">0.75 </button>
+        <button id="rate0.9" class="item item09">0.9 </button>
+        <button id="rate1.0" class="item item1">1.0 </button>
+        <button id="rate1.1" class="item item11">1.1 </button>
+        <button id="rate1.25" class="item item125">1.25 </button>
+        <button id="rate1.5" class="item item15">1.5 </button>
+        <button id="rate16.0" class="item item160">16.0 </button>
+    </div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
+
+<style>
+    /* button {
+      height: 35px;
+      border-radius: 5px; 
+      border: none;   
+    } */
+   
+    .flex-container {
+        width: 150px;
+        padding: 10px;
+        background-color: lightgrey;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:10px 20px;
+        border-radius: 30px;
+
+    }
+    .custom{
+        display: flex;  
+        border-radius: 8px;
+        width: 75px;
+        flex-grow: 1;
+        background: #F9FBFC;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        font-style: Times New Roman;
+        font-weight:100;
+    }
+    .custom button {
+        width: 15px;
+        background: none;
+        border: none;
+    }
+
+    .custom input {
+    flex-grow: 1;
+    width: 20px; 
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-align: center; 
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: Times New Roman;
+        font-weight:200;
+    }
+    .item025{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightblue;
+        height: 30px;
+    }
+    .item075{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightblue;
+        height: 30px;
+    }
+    .item05{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightblue;
+        height: 30px;
+    }
+
+    .item09{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightgreen;
+        height: 30px;
+    }
+    .item1{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightgreen;
+        height: 30px;
+    }
+    .item11{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightgreen;
+        height: 30px;
+    }
+
+    .item125{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightpink;
+        height: 30px;
+    }
+    .item15{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightpink;
+        height: 30px;
+    }
+
+    .item160{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightpink;
+        height: 30px;
+    }
+
+    /* .item4{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightyellow;
+        height: 30px;
+    }
+    .item5{
+        border-radius: 30px;
+        width: 35px;
+        flex-grow: 1;
+        background: lightgray;
+        height: 30px;
+    } */
+   
+    /* .newDiv{
+        text-align: center; 
+    } */ 
+   
+</style>
