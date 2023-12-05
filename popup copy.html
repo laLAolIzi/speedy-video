@@ -1,50 +1,47 @@
 <!-- 浏览器点击动作后弹出的界面,可以自定义交互和样式。 -->
 <!DOCTYPE html>  
-<html>
+<html >
 <!-- <body style="display:flex; align-items:center; justify-content:space-between;"> -->
-<body >
-    <div class="newDiv">
-        
-    </div>
-    <div id="flexContainer" class="flex-container">
-        <div class="custom" id="customContainer">
-            <button>-</button>
-            <input type="text" id="bgInput">
-            <button>+</button>
+<body style=" margin: 0px; padding: 0px;background-color: FFFF;">
+    <div id="roundedCornerBox">
+        <div id="flexContainer" class="flex-container">
+            <div class="custom" id="customContainer">
+                <button>-</button>
+                <input type="text" id="bgInput">
+                <button>+</button>
+            </div>
+            <button id="rate0.25" class="item item025">0.25 </button>
+            <button id="rate0.5" class="item item05">0.5 </button>
+            <button id="rate0.75" class="item item075">0.75 </button>
+            <button id="rate0.9" class="item item09">0.9 </button>
+            <button id="rate1.0" class="item item1">1.0 </button>
+            <button id="rate1.1" class="item item11">1.1 </button>
+            <button id="rate1.25" class="item item125">1.25 </button>
+            <button id="rate1.5" class="item item15">1.5 </button>
+            <button id="rate16.0" class="item item160">16.0 </button>
         </div>
-        <button id="rate0.25" class="item item025">0.25 </button>
-        <button id="rate0.5" class="item item05">0.5 </button>
-        <button id="rate0.75" class="item item075">0.75 </button>
-        <button id="rate0.9" class="item item09">0.9 </button>
-        <button id="rate1.0" class="item item1">1.0 </button>
-        <button id="rate1.1" class="item item11">1.1 </button>
-        <button id="rate1.25" class="item item125">1.25 </button>
-        <button id="rate1.5" class="item item15">1.5 </button>
-        <button id="rate16.0" class="item item160">16.0 </button>
     </div>
-
 <script src="popup.js"></script>
 
 </body>
 </html>
 
 <style>
-    /* button {
-      height: 35px;
-      border-radius: 5px; 
-      border: none;   
-    } */
-   
+/* #roundedCornerBox {
+  border-radius: 20px; 
+  -webkit-border-radius: 20px;
+} */
     .flex-container {
         width: 150px;
         padding: 10px;
-        background-color: lightgrey;
+        background-color: lightgray;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap:10px 20px;
         border-radius: 30px;
-
+        margin: 0;
+        border: 0;
     }
     .custom{
         display: flex;  
