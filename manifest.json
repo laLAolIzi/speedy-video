@@ -6,12 +6,12 @@
   "version": "1.0",
 
   "action": {
-    "default_popup": "popup copy.html"
+    "default_popup": "popup.html"
   },
 
   "permissions": ["scripting",  "activeTab", "tabs", "storage"],
 
-  "host_permissions": [],
+  "host_permissions": ["http://*/*",  "https://*/*"],
 
   "background": {
     "service_worker": "background.js"

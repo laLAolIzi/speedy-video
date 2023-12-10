@@ -5,7 +5,16 @@ const parentElement = document.getElementById("flexContainer");
 const bgInput = document.getElementById("bgInput")
 const customPlus = document.getElementById("customPlus")
 const customSub = document.getElementById("customSub")
-
+window.onload = function() {  
+  console.log('Popup loaded!');  
+  chrome.storage.local.get('default_rate',(res)=>{
+    let defaultRate = 1
+    if(res['default_rate']) {
+      defaultRate = res['default_rate'];  
+    }
+    bgInput.value = defaultRate
+  })
+};
 parentElement.addEventListener("click", function(event) {
   // 检查点击事件的目标元素是否以 "rate" 开头
   if (event.target.id && event.target.id.startsWith("rate")) {
@@ -35,11 +44,23 @@ parentElement.addEventListener("click", function(event) {
 
 // handle plus button
 customPlus.addEventListener('click',function(event) {
-  console.log('event.target.value:', event.target.value);
   let currentRate = bgInput.value
+  console.log('parseFloat(currentRate)',parseFloat(currentRate),currentRate)
+  bgInput.value =(parseFloat(currentRate)*10 + 0.1*10)/10
   chrome.runtime.sendMessage({
     type: 'CHANGE_RATE', 
-    rate: currentRate+1
+    rate: bgInput.value
+  });
+})
+
+// handle sub button
+customSub.addEventListener('click',function(event) {
+  console.log('customSub');
+  let currentRate = bgInput.value
+  bgInput.value =(parseFloat(currentRate)*10 - 0.1*10)/10
+  chrome.runtime.sendMessage({
+    type: 'CHANGE_RATE', 
+    rate: bgInput.value
   });
 })
 
