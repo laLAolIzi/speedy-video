@@ -9,8 +9,7 @@
     "default_popup": "popup copy.html"
   },
 
-  "permissions": ["scripting",  "activeTab", "tabs"],
-
+  "permissions": ["scripting",  "activeTab", "tabs", "storage"],
 
   "host_permissions": [],
 
@@ -20,7 +19,7 @@
 
   "content_scripts": [{
     "js": ["content.js"],
-
+    "run_at": "document_start",
     "matches": ["*://*/*"]
   }]
 

@@ -1,4 +1,4 @@
-//内容脚本,运行在网页环境中,可以读取DOM和JS上下文,实现页面交互。
+//内容脚本,运行在网页环境中,可以读取DOM和JS上下文,实现页面交互。注入页面，刷新当前页面，或打开新页面执行
 
 // 接收来自background的消息
 // chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -25,13 +25,20 @@
 //   } 
   
 // }
-var bg = chrome.extension.getBackgroundPage();
-var popupInput = bg.document.getElementById('customValue');
 
-let input = document.getElementById('customValue');
-console.log('2222')
-// input.addEventListener('change', function() {
-//   let value = this.value; 
-//   chrome.runtime.sendMessage({content: value}); 
-//   console.log('2222')
-// });
+// 将速率设置值传给content script
+// chrome.runtime.onMessage.addListener((msg)=> {
+//     if(msg.type === 'SET_RATE') {
+//         console.log('SET_RATE')
+    
+//         if(!isFinite(msg.value)) {
+//         console.log('background 传入的background rate格式不对 ，',msg.value)
+//         return;  
+//         }
+//         console.log('111,',)    
+//         let video = document.querySelector('video');
+//         console.log('222,',)  
+//         video.playbackRate = msg.value;
+//         console.log('background video.playbackRate:',video.playbackRate)
+//   }
+// })
