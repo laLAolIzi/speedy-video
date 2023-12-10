@@ -6,9 +6,9 @@
     <div id="roundedCornerBox">
         <div id="flexContainer" class="flex-container">
             <div class="custom" id="customContainer">
-                <button id="customSub">-</button>
+                <button id="customSub" class="SubPlus">-</button>
                 <input type="text" id="bgInput">
-                <button id="customPlus">+</button>
+                <button id="customPlus" class="SubPlus">+</button>
             </div>
             <button id="rate0.25" class="item item025">0.25 </button>
             <button id="rate0.5" class="item item05">0.5 </button>
@@ -46,14 +46,34 @@
     .custom{
         display: flex;  
         border-radius: 8px;
-        width: 75px;
+        width: 96px;
         flex-grow: 1;
         background: #F9FBFC;
-        height: 30px;
+        height: 23px;
         justify-content: center;
         align-items: center;
         font-style: Times New Roman;
         font-weight:100;
+        font-size: large;
+
+        .SubPlus {
+            justify-content: center;
+            align-items: center;
+            font-weight:200;
+            width: 40px;
+            border: none;
+            color: #333;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+        .SubPlus:hover {
+        background-color: #f0f0f0;
+        border-radius: 30px;
+}
     }
     .custom button {
         width: 15px;
@@ -68,13 +88,19 @@
     margin: 0;
     border: none;
     text-align: center; 
+    font-size: large;
     }
     .item{
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         font-style: Times New Roman;
         font-weight:200;
+        transition: background-color 0.3s ease;
+    }
+    .item:hover {
+        background-color: #f0f0f0;
     }
     .item025{
         border-radius: 30px;
